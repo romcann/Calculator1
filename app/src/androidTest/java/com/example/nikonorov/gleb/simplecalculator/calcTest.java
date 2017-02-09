@@ -47,6 +47,7 @@ public class calcTest {
         onView(withId(R.id.outputLabel)).check(matches(withText("4")));
     }
 
+    //Sample test to trigger test
 
     @Test
     public void testTwo(){
@@ -62,5 +63,17 @@ public class calcTest {
 
     }
 
+    @Test
+    public void subTwoNumbers(){
+        //8-4 = 4
+
+        onView(withId(R.id.eightButton)).perform(click());
+        onView(withId(R.id.subtractButton)).perform(click());
+        onView(withId(R.id.fourButton)).perform(click());
+        onView(withId(R.id.equalsButton)).perform(click());
+
+        onView(withId(R.id.outputLabel)).check(matches(withText("4")));
+
+    }
 
 }
